@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Aluno - FitLife Academia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">FitLife Academia</div>
+            <nav>
+                <button class="menu-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="institucional.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Matrícula/Contato</a></li>
+                    <li><a href="javascript:void(0)" id="logoutBtn">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Área do Aluno</h1>
+            </div>
+        </section>
+
+        <section class="painel-aluno">
+            <div class="container">
+                <div class="card">
+                    <h2>Meus Dados</h2>
+                    <div id="dadosAluno">
+                        <div class="dados-item">
+                            <p><strong>Nome:</strong> <span id="nomeAluno">Carregando...</span></p>
+                        </div>
+                        <div class="dados-item">
+                            <p><strong>E-mail:</strong> <span id="emailAluno">Carregando...</span></p>
+                        </div>
+                        <div class="dados-item">
+                            <p><strong>Plano:</strong> <span id="planoAluno">Carregando...</span></p>
+                        </div>
+                        <div class="dados-item">
+                            <p><strong>Data de Matrícula:</strong> <span id="dataMatricula">Carregando...</span></p>
+                        </div>
+                        <div class="dados-item">
+                            <p><strong>Vencimento:</strong> <span id="dataVencimento">Carregando...</span></p>
+                        </div>
+                        <div class="status-plano" id="statusPlano">
+                            <!-- Status será inserido aqui pelo JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FitLife Academia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/painel.js"></script>
+</body>
+</html>

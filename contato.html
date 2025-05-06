@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula/Contato - FitLife Academia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">FitLife Academia</div>
+            <nav>
+                <button class="menu-toggle">☰</button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="institucional.html">Sobre Nós</a></li>
+                    <li><a href="contato.html" class="active">Matrícula/Contato</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Matrícula / Contato</h1>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <div class="container">
+                <form id="formMatricula">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <span class="erro" id="erroNome"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="erro" id="erroEmail"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                        <span class="erro" id="erroTelefone"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="plano">Plano Desejado:</label>
+                        <select id="plano" name="plano" required>
+                            <option value="">Selecione um plano</option>
+                            <option value="basico">Básico - R$ 89,90</option>
+                            <option value="premium">Premium - R$ 119,90</option>
+                            <option value="vip">VIP - R$ 159,90</option>
+                        </select>
+                        <span class="erro" id="erroPlano"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem (opcional):</label>
+                        <textarea id="mensagem" name="mensagem"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FitLife Academia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/validacao.js"></script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -78,8 +79,18 @@
             <p>&copy; 2025 FitLife Academia. Todos os direitos reservados.</p>
         </div>
     </footer>
+<!-- SDKs Firebase versão 8 -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 
-    <script src="js/script.js"></script>
-    <script src="js/validacao.js"></script>
+<!-- Arquivo com a configuração do Firebase (onde está o db) -->
+<script src="js/firebase-config.js"></script>
+
+<!-- Script de envio (que usa o db declarado acima) -->
+<script src="js/envio.js"></script>
+
+
+
 </body>
 </html>

@@ -35,6 +35,26 @@ const firebaseConfig = {
           window.location.href = 'login.html';
         }
       }
+
+      auth.onAuthStateChanged(async user => {
+  if (user) {
+    const docRef = db.collection('usuarios').doc(user.uid);
+    const docSnap = await docRef.get();
+
+    if (!docSnap.exists) {
+      // Criar novo documento caso não exista
+      await docRef.set({
+        nome: user.displayName || "Aluno",
+        email: user.email,
+        plano: "Padrão",
+        dataMatricula: new Date(),
+        dataVencimento: new Date(new Date().setMonth(new Date().getMonth() + 1)) // 1 mês depois
+      });
+      console.log("Novo documento de usuário criado!");
+    }
+  }
+});
+
     });
   }
   
